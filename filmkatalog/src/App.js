@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import MovieData from './data/MovieData.json'
 import { useState } from 'react';
-import Testing from './components/Testing.js'
+import Poster from './components/Poster.js'
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <Testing />
+      <Poster src="test" />
     </div>
   );
 }
