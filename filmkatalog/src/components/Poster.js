@@ -1,7 +1,12 @@
 
-const fallbackUrl = "https://placehold.co/600x400?text=Missing+Poster"
 
-export default function Poster(props) {
+export default function Poster({ movie }) {
+
+  const fallbackUrl = "https://placehold.co/500x400?text=Missing+Poster"
+  const baseUrl = "https://image.tmdb.org/t/p/w500"
+
+  const fullPosterUrl = movie.poster_path ? `${baseUrl}${movie.poster_path}` : fallbackUrl;
+  console.log("movie.poster_path:", movie.Poster);
 
   const handleImgError = (e) => {
     e.target.src = fallbackUrl;
@@ -9,7 +14,11 @@ export default function Poster(props) {
 
   return (
     <figure className="poster">
-    <img src={ props.src } alt={`${props.title} Poster`} onError={handleImgError}></img>
+      <img 
+        src={fullPosterUrl}
+        alt={`${movie.title} Poster`}
+        onError={handleImgError}>
+      </img>
     </figure>
   );
 }
