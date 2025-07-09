@@ -1,27 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import MovieData from './data/MovieData.json'
-import { useState } from 'react';
+import { use, useState } from 'react';
 import Poster from './components/Poster.js'
 
 function App() {
+  const [movies, setMovies] = useState(MovieData) 
+  const [selectedMovie, setSelectedMovie] = useState(movies[0]) // the 0 is just to test using the first movie, later it will be chosen from the list
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <Poster src="test" />
+      <Poster movie={selectedMovie} />
     </div>
   );
 }
