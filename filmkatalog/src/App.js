@@ -17,7 +17,7 @@ function App() {
   return (
     <main className="app-container">
       <aside className="left-column">
-        <MovieList movies={movies} onMovieSelect={setSelectedMovie} />
+        <MovieList movies={movies} onMovieSelect={setSelectedMovie} selectedMovie={selectedMovie} />
         <button onClick={handleSearchClick}>Search for More</button>
       </aside>
 
