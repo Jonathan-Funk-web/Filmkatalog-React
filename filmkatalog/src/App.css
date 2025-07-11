@@ -11,3 +11,14 @@
   border: 1px solid #ccc;
   padding: 1rem;
 }
+
+.movie-details-title,
+.movie-details-year {
+  margin: 0;
+}
+
+.movie-details-year {
+  font-weight: normal;
+  color: gray;
+  margin-top: 4px;
+}
