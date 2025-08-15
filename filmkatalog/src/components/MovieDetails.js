@@ -1,11 +1,15 @@
-const tmdbkey = process.env.REACT_APP_TMDB_KEY;
-const omdbkey = process.env.REACT_APP_OMDB_KEY;
-
 export default function MovieDetails({ movie }) {
   if (!movie) return <section className="movie-details">Select a movie to see details</section>;
 
   const releaseYear = new Date(movie.release_date).getFullYear();
 
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer ' + "${tmdbkey}"
+    }
+  };
 
   return (
     <section className="movie-details">
