@@ -1,0 +1,2 @@
+- make a random backdrop become the background for the application
+- I can use OMDB to get the following ratings for the movies: IMDb, RT, Metacritic
