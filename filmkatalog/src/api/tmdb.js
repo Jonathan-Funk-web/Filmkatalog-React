@@ -2,13 +2,18 @@ const tmdbkey = process.env.REACT_APP_TMDB_KEY;
 const omdbkey = process.env.REACT_APP_OMDB_KEY;
 const tmdb_base_URL = "https://api.themoviedb.org/3/"
 
-export async function fetchMovie(query) {
-    try {
-        let response = await fetch(`${tmdb_base_URL}/search/movie?api_key=${tmdbkey}&query=${query}`);
-        let data = await response.json();
-        console.log("Fetched Data:", data);
-    } catch (error) {
-        console.log("Error:", error);
+const options = {
+    method: 'GET',
+    headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer ' + tmdbkey
     }
-}
+};
 
+
+export async function fetchMovieDetails(movie_id) {
+    fetch(tmdb_base_URL + "movie/" + movie_id, options)
+    .then(res => res.json())
+    .then(res => console.log(res))
+    .catch(err => console.error(err));
+}
