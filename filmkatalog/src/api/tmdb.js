@@ -15,5 +15,5 @@ export async function fetchMovieDetails(movie_id) {
     fetch(tmdb_base_URL + "movie/" + movie_id, options)
     .then(res => res.json())
     .then(res => console.log(res))
-    .catch(err => console.error(err));
+    .catch(err => console.error("Error with fetching movie details:" + err));
 }
