@@ -17,3 +17,10 @@ export async function fetchMovieDetails(movie_id) {
     .then(res => console.log(res))
     .catch(err => console.error("Error with fetching movie details:" + err));
 }
+
+export async function fetchMovieSearchByName(movie_name) {
+    fetch(tmdb_base_URL + "search/movie?query=" + movie_name, options)
+    .then(res => res.json())
+    .then(res => console.log(res))
+    .catch(err => console.error("Error with fetching movie details:" + err));
+}
