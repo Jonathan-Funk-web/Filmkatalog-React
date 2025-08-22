@@ -14,7 +14,6 @@ export async function fetchMovieDetails(movie_id) {
     try {
         const response = await fetch(tmdb_base_URL + "movie/" + movie_id, options);
         const data = await response.json();
-        console.log(data);
         return data;
     } catch (err) {
         console.error("Error with fetching movie details:", err);
@@ -26,7 +25,7 @@ export async function fetchMovieSearchByName(movie_name) {
     try {
         const response = await fetch(tmdb_base_URL + "search/movie?query=" + movie_name, options);
         const data = await response.json();
-        console.log(data);
+        return data;
     } catch (err) {
         console.error("Error with fetching movie search by name:", err);
         throw err;
