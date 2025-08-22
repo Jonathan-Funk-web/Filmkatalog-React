@@ -6,6 +6,7 @@ import MovieDetails from './components/MovieDetails'
 import { use, useState } from 'react';
 import Poster from './components/Poster.js'
 import { fetchMovieDetails } from './api/tmdb.js';
+import AddMovie from './components/AddMovie.js';
 
 function App() {
   const [movies, setMovies] = useState(MovieData) 
@@ -21,6 +22,8 @@ function App() {
       <aside className="left-column">
         <MovieList movies={movies} onMovieSelect={setSelectedMovie} selectedMovie={selectedMovie} />
         <button onClick={() => handleSearchClick("123")}>Test stuff</button>
+        <hr/>
+        <AddMovie/>
       </aside>
 
       <section className="middle-column">
