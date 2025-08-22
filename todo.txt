@@ -1,2 +1,10 @@
 - make a random backdrop become the background for the application
-- I can use OMDB to get the following ratings for the movies: IMDb, RT, Metacritic
+- I can use OMDb to get the following ratings for the movies: IMDb, RT, Metacritic
+
+- Stuff I dont need from the TMDb API `Movie Details` call:
+| adult
+| overview (I will use OMDb's full overview instead, but i might have this as a backup if there is no overview for the movie on OMDb)
+| revenue (I will use BoxOffice from the OMDb)
+| popularity (since this is only the popularity on TMDb... so not the most usefull (i think))
+| vote_average (I will use the rating from OMDb's data on IMDb, RT and Metacritic)
+| vote_count (se above)
