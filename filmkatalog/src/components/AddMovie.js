@@ -8,6 +8,10 @@ export default function AddMovie() {
         e.preventDefault(); //This is to prevent the form from reloading the page
         fetchMovieSearchByName(name)
     }
+    const handleMovieIDSearch = (e) => {
+        e.preventDefault(); //This is to prevent the form from reloading the page
+        fetchMovieDetails(name)
+    }
 
     function handleChange(e) {
         setName(e.target.value);
@@ -24,6 +28,7 @@ export default function AddMovie() {
                 />
             </label><br/>
             <button onClick={handleMovieSearch}>Search Movie</button>
+            <button onClick={handleMovieIDSearch}>Search ID</button>
         </form>
     );
 }
