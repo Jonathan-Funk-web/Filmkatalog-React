@@ -10,17 +10,25 @@ const options = {
     }
 };
 
-
 export async function fetchMovieDetails(movie_id) {
-    fetch(tmdb_base_URL + "movie/" + movie_id, options)
-    .then(res => res.json())
-    .then(res => console.log(res))
-    .catch(err => console.error("Error with fetching movie details:" + err));
+    try {
+        const response = await fetch(tmdb_base_URL + "movie/" + movie_id, options);
+        const data = await response.json();
+        console.log(data);
+        return data;
+    } catch (err) {
+        console.error("Error with fetching movie details:", err);
+        throw err;
+    }
 }
 
 export async function fetchMovieSearchByName(movie_name) {
-    fetch(tmdb_base_URL + "search/movie?query=" + movie_name, options)
-    .then(res => res.json())
-    .then(res => console.log(res))
-    .catch(err => console.error("Error with fetching movie details:" + err));
+    try {
+        const response = await fetch(tmdb_base_URL + "search/movie?query=" + movie_name, options);
+        const data = await response.json();
+        console.log(data);
+    } catch (err) {
+        console.error("Error with fetching movie search by name:", err);
+        throw err;
+    }
 }
