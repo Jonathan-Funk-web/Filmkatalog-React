@@ -11,3 +11,16 @@
 
 Following this guide:
 https://www.youtube.com/watch?v=aSdVU9-SxH4
+
+
+When setting up i might need to run these commands:
+
+PS C:\Users\Bruker\TEMP\Filmkatalog-React> cd .\backend\
+PS C:\Users\Bruker\TEMP\Filmkatalog-React\backend> python -m venv venv
+PS C:\Users\Bruker\TEMP\Filmkatalog-React\backend> .\venv\scripts\activate
+(venv) PS C:\Users\Bruker\TEMP\Filmkatalog-React\backend> pip install -r .\requirements.txt
+(venv) PS C:\Users\Bruker\TEMP\Filmkatalog-React\backend> python .\main.py
+
+PS C:\Users\Bruker\TEMP\Filmkatalog-React> cd .\frontend\
+PS C:\Users\Bruker\TEMP\Filmkatalog-React\frontend> npm install
+PS C:\Users\Bruker\TEMP\Filmkatalog-React\frontend> npm start
