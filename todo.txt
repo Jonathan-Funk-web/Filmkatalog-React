@@ -23,4 +23,5 @@ PS C:\Users\Bruker\TEMP\Filmkatalog-React\backend> .\venv\scripts\activate
 
 PS C:\Users\Bruker\TEMP\Filmkatalog-React> cd .\frontend\
 PS C:\Users\Bruker\TEMP\Filmkatalog-React\frontend> npm install
+PS C:\Users\Bruker\TEMP\Filmkatalog-React\frontend> npm install axios # I might not need this but adding it here just to be safe
 PS C:\Users\Bruker\TEMP\Filmkatalog-React\frontend> npm start
