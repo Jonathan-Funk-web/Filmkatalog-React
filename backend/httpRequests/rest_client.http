@@ -1,0 +1,13 @@
+POST http://localhost:8000/movie_list
+Content-Type: application/json
+
+{
+    "title": "asdf movie 1"
+}
+###
+POST http://localhost:8000/movie_list
+Content-Type: application/json
+
+{
+    "title": "asdf movie 2"
+}
