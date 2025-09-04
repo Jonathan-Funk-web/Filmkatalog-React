@@ -9,8 +9,9 @@
 | vote_average (I will use the rating from OMDb's data on IMDb, RT and Metacritic)
 | vote_count (se above)
 
-Following this guide:
+Following these guides:
 https://www.youtube.com/watch?v=aSdVU9-SxH4
+https://fastapi.tiangolo.com/tutorial/
 
 
 When setting up i might need to run these commands:
