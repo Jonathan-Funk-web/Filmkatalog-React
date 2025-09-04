@@ -21,6 +21,9 @@ PS C:\Users\Bruker\TEMP\Filmkatalog-React\backend> .\venv\scripts\activate
 (venv) PS C:\Users\Bruker\TEMP\Filmkatalog-React\backend> pip install -r .\requirements.txt
 (venv) PS C:\Users\Bruker\TEMP\Filmkatalog-React\backend> python .\main.py
 
+if i want to launch the testing backend use this:
+(venv) PS C:\Users\Bruker\TEMP\Filmkatalog-React\backend> uvicorn testing:app --reload
+
 PS C:\Users\Bruker\TEMP\Filmkatalog-React> cd .\frontend\
 PS C:\Users\Bruker\TEMP\Filmkatalog-React\frontend> npm install
 PS C:\Users\Bruker\TEMP\Filmkatalog-React\frontend> npm install axios # I might not need this but adding it here just to be safe
